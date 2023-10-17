@@ -5,9 +5,10 @@ using UnityEngine;
 public class RuoMian : MonoBehaviour
 {
     public GameObject Bowl, Water, Flour, MianTuan, Spoon, HandL,HandR,CaiBan;
-    //public GameObject Dect1,Dect2,Dect3,Dect4;
+    public GameObject Dect1,Dect2,Dect3,Dect4;
     private Vector3 lastPosition;
     public float speed;
+    //state 1:白水，state2：粉水，state3：面团
     private string State;
 
 
@@ -22,17 +23,33 @@ public class RuoMian : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DectectIfRouMianDone();
-
-
-
-        if ((Vector3.Distance(HandL.transform.position, HandR.transform.position)>2))
+        if(State ==1)
         {
-            print("hi");
-
+            MakePinkWater();
         }
-    
+        if(State ==2)
+        {
+           MakeMianTuan();
+        }
+        if(State ==3)
+        {
+            DectectIfRouMianDone();
+        }
     }
+
+    void MakePinkWater()
+    {
+        if (HandR)
+    }
+
+    void MakeMianTuan()
+    {
+        
+    }
+
+
+
+
 
     void DectectIfRouMianDone()
     {
@@ -49,13 +66,23 @@ public class RuoMian : MonoBehaviour
         if ((speed > 0.5) &&( collision.gameObject == CaiBan))
         {
             State ="Haole";
+            print("haole");
         }
         else if ((speed < 0.5) && (collision.gameObject == CaiBan))
         {
             State ="MeiHao";
+            print("meihao");
         }
     }
         
+    void ChenMian()
+    {
+        if ((Vector3.Distance(HandL.transform.position, HandR.transform.position)>2))
+        {
+            print("hi");
+
+        }
+    }
 
 
 

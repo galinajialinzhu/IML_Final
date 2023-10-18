@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OilFillPot : MonoBehaviour
 {
@@ -8,7 +9,11 @@ public class OilFillPot : MonoBehaviour
     public GameObject oilInPot;   // The GameObject representing the oil level inside the pot.
     public GameObject tracker;    // The tracker object that detects the collision.
     public GameObject referenceObject; // The object whose position and scale will be the target.
-    public float duration;        // Duration over which the filling takes place.
+    public float fillDuration;        // Duration over which the filling takes place.
+    public float boilingTime;     // Time for the oil to boil after filling.
+
+    [Header("Boiling Completion Event")]
+    public UnityEvent onBoilingCompleted;  // Events to run after boiling is complete.
 
     private bool isFilling = false; // Flag to check if oil is filling.
 
@@ -30,9 +35,9 @@ public class OilFillPot : MonoBehaviour
         Vector3 initialScale = oilInPot.transform.localScale;
         Vector3 targetScale = referenceObject.transform.localScale;
 
-        while (elapsedTime < duration)
+        while (elapsedTime < fillDuration)
         {
-            float progress = elapsedTime / duration;
+            float progress = elapsedTime / fillDuration;
 
             // Update position and scale based on progress
             oilInPot.transform.position = Vector3.Lerp(initialPosition, targetPosition, progress);
@@ -47,7 +52,11 @@ public class OilFillPot : MonoBehaviour
         oilInPot.transform.localScale = targetScale;
 
         isFilling = false;
+
+        // Start boiling phase
+        yield return new WaitForSeconds(boilingTime);
+
+        // Invoke events after boiling
+        onBoilingCompleted.Invoke();
     }
 }
-
-

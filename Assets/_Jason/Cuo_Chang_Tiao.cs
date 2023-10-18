@@ -50,6 +50,12 @@ public class Cuo_Chang_Tiao : MonoBehaviour
         }
     }
 
+    void sizeChange(double speed)
+    {
+        Vector3 currentScale = transform.localScale;
+        Vector3 newScale = new Vector3(currentScale.x - scalingSpeed, currentScale.y + scalingSpeed * 3, currentScale.z - scalingSpeed);
+        transform.localScale= newScale;
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == handName || other.gameObject.name == "l_handMeshNode")

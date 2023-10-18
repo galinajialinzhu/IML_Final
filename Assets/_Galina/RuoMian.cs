@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RuoMian : MonoBehaviour
 {
-    public GameObject PinkWater,PinkPowder;
-    public GameObject Bowl, Water, Flour, MianTuan, Spoon, HandL,HandR,CaiBan;
+    public GameObject PinkPowder;
+    public GameObject Bowl, Water, Flour, oil, MianTuan, Spoon, HandL,HandR,CaiBan,MianTuan2;
     private GameObject Dect1,Dect2,Dect3,Dect4;
     public Material EmptyColor, WaterColor,PinkColor;
     private Vector3 lastPosition;
@@ -13,7 +13,7 @@ public class RuoMian : MonoBehaviour
     //step 1:白水，step2：粉水，step3：面团
     private string State,Step;
 
-    private bool AddWater,AddPinkPowder;
+    private bool AddWater,AddPinkPowder,Mix;
 
 
 
@@ -23,6 +23,7 @@ public class RuoMian : MonoBehaviour
         Step ="1";
         AddPinkPowder = false;
         AddWater = false;
+        Mix = false;
         MianTuan.GetComponent<Renderer>().material = EmptyColor;
         
     }
@@ -46,8 +47,8 @@ public class RuoMian : MonoBehaviour
 
     void MakePinkWater()
     {
-        if((AddWater == true)&&(AddPinkPowder = true)){
-            Step = "2";
+        if((AddWater == true)&&(AddPinkPowder = true)&&(Mix == true)){
+            Step = "3";
         }
     }
 
@@ -71,19 +72,37 @@ public class RuoMian : MonoBehaviour
         {
             //grabbable can change it transformer
             print("mo");
+            MianTuan.transform.localScale = new Vector3(0.2f, 0.2f, 0.8f);
         }
 
         if((State =="MeiHao")&&(MianTuan.transform.position.y >0.5f))
         {
             //grabbable can change it transformer
             print("lie");
+            MianTuan.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            MianTuan.transform.position = HandL.transform.position;
+            ToggleObjectVisibility(MianTuan2);
+            MianTuan2.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            MianTuan2.transform.position = HandR.transform.position;
+
+        }
+    }
+
+    void ToggleObjectVisibility(GameObject targetMian)
+    {
+        // Check if the target object has a Renderer component
+        Renderer mianRenderer = targetMian.GetComponent<Renderer>();
+        if (mianRenderer != null)
+        {
+            // Toggle the visibility of the target object
+            mianRenderer.enabled = !mianRenderer.enabled;
         }
     }
 
             
     void OnCollisionEnter(Collision collision)
     {
-        //检测有没有加入碗里
+        //检测有没有加入水到碗里
         if (collision.gameObject == Water)
         {
             AddWater = true;
@@ -92,13 +111,24 @@ public class RuoMian : MonoBehaviour
             Destroy(Water);
         }
 
+        //检测有没有加入颜色粉到碗里
         if (collision.gameObject == PinkPowder)
         {
             AddPinkPowder = true;
             print("add powder");
-            MianTuan.GetComponent<Renderer>().material = PinkColor;
+            //MianTuan.GetComponent<Renderer>().material = PinkColor;
             Destroy(PinkPowder);
         }
+
+        //检测有没有搅拌
+        if (collision.gameObject == Spoon)
+        {
+            Mix = true;
+            print("Mix");
+            MianTuan.GetComponent<Renderer>().material = PinkColor;
+            
+        }
+        
 
         if ((speed > 0.5) &&( collision.gameObject == CaiBan))
         {
@@ -112,20 +142,7 @@ public class RuoMian : MonoBehaviour
         }
     }
         
-    void ChenMian()
-    {
-        if ((Vector3.Distance(HandL.transform.position, HandR.transform.position)>2))
-        {
-            print("hi");
-
-        }
-    }
-
-
-
-
-    
-    
+  
     
 }
 

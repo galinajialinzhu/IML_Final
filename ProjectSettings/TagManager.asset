@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+<<<<<<< HEAD
+  - hand
+=======
+  - fire
+  - fire stone
+  - pastry
+>>>>>>> alice
   layers:
   - Default
   - TransparentFX

@@ -68,14 +68,14 @@ public class RuoMian : MonoBehaviour
         speed = displacement.magnitude / Time.deltaTime;
         lastPosition = transform.position;
 
-        if((State =="Haole")&&(MianTuan.transform.position.y >0.5f))
+        if((State =="Haole")&&(HandR.transform.position.z - HandR.transform.position.z >0.5f))
         {
             //grabbable can change it transformer
             print("mo");
             MianTuan.transform.localScale = new Vector3(0.2f, 0.2f, 0.8f);
         }
 
-        if((State =="MeiHao")&&(MianTuan.transform.position.y >0.5f))
+        if((State =="MeiHao")&&(HandR.transform.position.z - HandR.transform.position.z >0.5f ))
         {
             //grabbable can change it transformer
             print("lie");

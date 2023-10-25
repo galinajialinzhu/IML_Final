@@ -4,45 +4,55 @@ using UnityEngine;
 
 public class TigerSmallPose : MonoBehaviour
 {
-
     public GameObject DetectBall;
     public int numberOfObjects;
-    public float x,y,z;
-    public List<Vector3> locate = new List<Vector3>();
-
+    public float x, y, z;
+    public List<GameObject> locate = new List<GameObject>();
+    public Material LaterColorBall, NextColorBall;
 
     // Start is called before the first frame update
     void Start()
     {
-        //locate.Add(new Vector3(0, 0, 0));
-        
+        //locate.Add(Instantiate(DetectBall, new Vector3(0, 0, 0), Quaternion.identity));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
-            TigerPose();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TigerHandUp();
         }
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            TigerHandDown();
+        }
     }
 
-    void TigerPose()
+    void TigerHandUp()
     {
-         for (int i = 0; i < numberOfObjects; i++)
+        for (int i = 0; i < numberOfObjects; i++)
         {
             GameObject newObject = Instantiate(DetectBall);
-
-            locate.Add(new Vector3(0, y, z));
-            y+=0.1f;
-            z=(1.0f / 2.0f)*y*y-y+1;
-            newObject.transform.position = locate[i];
-
-            
+            locate.Add(newObject);
+            locate[i].transform.position = new Vector3(0, y, z);
+            y += 0.1f;
+            z = (1.0f / 2.0f) * y * y - y + 1;
         }
-        
-
     }
 
+    void TigerHandDown()
+    {
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            GameObject newObject = Instantiate(DetectBall);
+            locate.Add(newObject);
+            locate[i].transform.position = new Vector3(0, y, z);
+            y += 0.1f;
+            z = (1.0f / 2.0f) * y * y - y + 1;
+            locate[i].GetComponent<Renderer>().material = LaterColorBall;
+        }
 
+        locate[0].GetComponent<Renderer>().material = NextColorBall;
+    }
 }

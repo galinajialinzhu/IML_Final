@@ -277,6 +277,8 @@ MonoBehaviour:
   y: 0
   z: 0
   locate: []
+  LaterColorBall: {fileID: 2100000, guid: b4900c70fd0e0784cbe9be09078e7d78, type: 2}
+  NextColorBall: {fileID: 2100000, guid: 790833049b8ae01468f3f633cd7108d1, type: 2}
 --- !u!4 &1654368344
 Transform:
   m_ObjectHideFlags: 0

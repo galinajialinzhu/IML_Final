@@ -48,11 +48,9 @@ public class TigerSmallPose : MonoBehaviour
             GameObject newObject = Instantiate(DetectBall);
             locate.Add(newObject);
             locate[i].transform.position = new Vector3(0, y, z);
-            y += 0.1f;
+            y += 0.01f;
             z = (1.0f / 2.0f) * y * y - y + 1;
-            locate[i].GetComponent<Renderer>().material = LaterColorBall;
         }
 
-        locate[0].GetComponent<Renderer>().material = NextColorBall;
     }
 }

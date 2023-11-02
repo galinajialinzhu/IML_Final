@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2390535681626312755}
   - component: {fileID: 6655633858108996040}
   m_Layer: 0
-  m_Name: HuPu_ShenZhi (1)
+  m_Name: XiongYun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1

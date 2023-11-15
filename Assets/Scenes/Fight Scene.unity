@@ -10666,9 +10666,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967675784310318980}
-  - component: {fileID: 7985478171938763709}
   - component: {fileID: 7985478171938763711}
   - component: {fileID: 7985478171938763710}
+  - component: {fileID: 7985478171938763709}
   m_Layer: 0
   m_Name: Tiger_tiger
   m_TagString: Untagged
@@ -11749,7 +11749,7 @@ Animator:
   m_GameObject: {fileID: 443058463289916734}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93dbdefe4bc9b544b800a24cb0582da2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

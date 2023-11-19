@@ -1,39 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
-public class FollowMovement : MonoBehaviour
+public class ControlTime : MonoBehaviour
 {
+    public Animator animator;
+
+    [Range(0.0f, 1.0f)]
+    public float time;
 
     public Transform LTargetObject;
     public Transform RTargetObject;
     public Transform trigger1;
     public Transform trigger2;
 
-    public float tiger_time;
-
     public float height;
     public float heightPercent;
 
     private float distance;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
+        float time = 0;
+
         height = 0;
         heightPercent = 0;
         distance = trigger1.position.y - trigger2.position.y;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         height = RTargetObject.position.y - trigger2.position.y;
         heightPercent = (distance - (trigger1.position.y - RTargetObject.position.y)) / distance;
 
-        //tiger_time = Tiger.ControlTime.time;
         if (heightPercent <= 1 && heightPercent >= 0 ){
             
-            //Tiger.ControlTime.time = heightPercent;
+            time = heightPercent;
+            
+            animator.SetFloat("Time", time);
+        }else if (heightPercent > 1){
+            time = 1;
+        }else{
+            time = 0;
         }
+
     }
 }

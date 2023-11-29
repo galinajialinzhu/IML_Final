@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using UnityEngine.UI;
 
 
 public class Huatuo : MonoBehaviour
@@ -88,15 +87,12 @@ public class Huatuo : MonoBehaviour
 
     private IEnumerator FadeOutAndChangeScene(string sceneName, float delay)
     {
-        Image fadeImage = GetComponentInChildren<Image>(); // Assuming the Image component is a child of the Canvas
-        Color startColor = fadeImage.color;
-        startColor.a = 0f; // Set initial alpha to 0
-
         float elapsedTime = 0f;
         while (elapsedTime < delay)
         {
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / delay);
-            fadeImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            // Perform a fade-out effect by adjusting the alpha of an image or overlay
+            // Example: YourFadeImage.color = new Color(1, 1, 1, Mathf.Lerp(0f, 1f, elapsedTime / delay));
+            
             elapsedTime += Time.deltaTime;
             yield return null;
         }

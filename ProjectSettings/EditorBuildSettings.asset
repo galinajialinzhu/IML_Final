@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Alice/Scenes/00 Home.unity
     guid: c208546d53214144fa049dc5b69853e8
+  - enabled: 1
+    path: Assets/_K0TANG/Scenes/Map_Update/Map_Wood.unity
+    guid: 0e50a043fb6eb8a40903ff35e3be979d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a0149944be61ad3448d440077794607c,
       type: 2}

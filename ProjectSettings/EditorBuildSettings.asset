@@ -14,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Wood.unity
     guid: 0e50a043fb6eb8a40903ff35e3be979d
+  - enabled: 1
+    path: Assets/_K0TANG/Scenes/Map_Update/Map_Fire.unity
+    guid: 59a789da774372e4a90af7cc419787f2
+  - enabled: 1
+    path: Assets/_K0TANG/Scenes/Map_Update/Map_Water.unity
+    guid: 3b0d0ed2f6a0c244fac65e18588f4c99
+  - enabled: 1
+    path: Assets/_K0TANG/Scenes/Map_Update/Map_Earth.unity
+    guid: c6e651f9567402b42ac53bfc7e7bd656
+  - enabled: 1
+    path: Assets/_K0TANG/Scenes/Map_Update/Map_Metal.unity
+    guid: 798ebc1ac8d38974f93cf6e73a4c7cd3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a0149944be61ad3448d440077794607c,
       type: 2}

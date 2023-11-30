@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWithController : MonoBehaviour
+public class Moving : MonoBehaviour
 {
     [Header("Movement Settings")]
     public Transform centerEyeAnchor; // Assign the CenterEyeAnchor in the Inspector

@@ -36,7 +36,7 @@ public class ControlTime : MonoBehaviour
             
             time = heightPercent;
             
-            animator.SetFloat("Time", time);
+            animator.SetFloat("Ju", time);
         }else if (heightPercent > 1){
             time = 1;
         }else{

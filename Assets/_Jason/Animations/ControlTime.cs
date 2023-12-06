@@ -1,46 +1,76 @@
 using UnityEngine;
 using System.Collections;
 
-public class ControlTime : MonoBehaviour
+public class ControlPu : MonoBehaviour
 {
     public Animator animator;
 
     [Range(0.0f, 1.0f)]
-    public float time;
+    public float Ju;
+    [Range(0.0f, 1.0f)]
+    public float Pu;
 
     public Transform LTargetObject;
     public Transform RTargetObject;
-    public Transform trigger1;
-    public Transform trigger2;
+    public Transform TopTrigger;
+    public Transform BottomTrigger;
+    
+    public Transform FrontTrigger;
+    public Transform BackTrigger;
+
 
     public float height;
     public float heightPercent;
 
-    private float distance;
+    public float length;
+    public float lengthPercent;
+
+    private float dh;
+    private float dl;
 
     private void Start()
     {
-        float time = 0;
+        float Ju = 0;
+        float Pu = 0;
 
         height = 0;
+        length = 0;
+
         heightPercent = 0;
-        distance = trigger1.position.y - trigger2.position.y;
+        lengthPercent = 0;
+
+        dh = TopTrigger.position.y - BottomTrigger.position.y;
+        dl = FrontTrigger.position.z - BackTrigger.position.z;
     }
 
     private void Update()
     {
-        height = RTargetObject.position.y - trigger2.position.y;
-        heightPercent = (distance - (trigger1.position.y - RTargetObject.position.y)) / distance;
+        height = RTargetObject.position.y - BottomTrigger.position.y;
+        heightPercent = (dh - (TopTrigger.position.y - RTargetObject.position.y)) / dh;
 
         if (heightPercent <= 1 && heightPercent >= 0 ){
             
-            time = heightPercent;
+            Ju = heightPercent;
             
-            animator.SetFloat("Ju", time);
+            animator.SetFloat("Ju", Ju);
         }else if (heightPercent > 1){
-            time = 1;
+            Ju = 1;
         }else{
-            time = 0;
+            Ju = 0;
+        }
+
+        length = RTargetObject.position.z - BackTrigger.position.z;
+        lengthPercent = (dl - (FrontTrigger.position.z - RTargetObject.position.z)) / dl;
+
+        if ((lengthPercent <= 1 && lengthPercent >= 0) || (heightPercent <= 1 && heightPercent >= 0)){
+            
+            Pu = (float)(heightPercent*.4 + lengthPercent*.6);
+            
+            animator.SetFloat("Pu", Pu);
+        }else if (lengthPercent > 1){
+            Pu = 1;
+        }else{
+            Pu = 0;
         }
 
     }

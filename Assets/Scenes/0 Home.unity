@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 70861281}
   - component: {fileID: 70861280}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: ProjectionCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2590,8 +2590,8 @@ Transform:
   m_GameObject: {fileID: 854139556}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.48}
-  m_LocalScale: {x: 3.0400002, y: 0.44627202, z: 3.0400002}
+  m_LocalPosition: {x: 0, y: 0, z: 0.53}
+  m_LocalScale: {x: 3.3700001, y: 0.494716, z: 3.3700001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1901557078}
@@ -2613,7 +2613,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
@@ -4851,6 +4851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992554339850060901, guid: 7fad31a72f677504e8485088c68fd3ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5238120040421012413, guid: 7fad31a72f677504e8485088c68fd3ed,
         type: 3}

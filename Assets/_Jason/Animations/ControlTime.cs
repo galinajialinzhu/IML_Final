@@ -64,7 +64,7 @@ public class ControlPu : MonoBehaviour
 
         if ((lengthPercent <= 1 && lengthPercent >= 0) || (heightPercent <= 1 && heightPercent >= 0)){
             
-            Pu = (float)(heightPercent*.4 + lengthPercent*.6);
+            Pu = (float)(heightPercent*.6 + lengthPercent*.8);
             
             animator.SetFloat("Pu", Pu);
         }else if (lengthPercent > 1){

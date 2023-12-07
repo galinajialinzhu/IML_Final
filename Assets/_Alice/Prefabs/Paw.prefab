@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3460380877238015199}
   - component: {fileID: 4346983073434360130}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,9 +135,9 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2274435910614165931}
+  - {fileID: 6139432206929950200}
   - {fileID: 3937547242708887062}
   - {fileID: 6583830443021362985}
-  - {fileID: 6139432206929950200}
   - {fileID: 4511884169530432231}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 1971540124540030951}
   - component: {fileID: 6757846185404442331}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 6542958805608430850}
   - component: {fileID: 4914803740321944204}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 1246048695691374080}
   - component: {fileID: 1657632704188449324}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1316,6 +1316,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8563881003328077839, guid: e4d379ab36917134f988f614ca15ba82,
+        type: 3}
+      propertyPath: m_PreserveTreePrototypeLayers
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1381011314147091414, guid: e4d379ab36917134f988f614ca15ba82, type: 3}

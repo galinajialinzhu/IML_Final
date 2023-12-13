@@ -3096,7 +3096,7 @@ PrefabInstance:
     - target: {fileID: 871440784470337985, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1099303075621529045, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
@@ -3151,7 +3151,7 @@ PrefabInstance:
     - target: {fileID: 5559310406335538580, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5710735200753750993, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
@@ -4481,7 +4481,7 @@ PrefabInstance:
     - target: {fileID: 5559310406335538580, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5710735200753750993, guid: 0bec0f6f2a0baf64fb7f2adc8af86873,
         type: 3}
@@ -5788,6 +5788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tiger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066968444295769694, guid: cc1e9e602358c2146a7512992ca2e55e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7653869922668254635, guid: cc1e9e602358c2146a7512992ca2e55e,
         type: 3}

@@ -384,6 +384,11 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4492057401709128093, guid: f3bde662581fba74ebf10a6679e11f4e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62fdd3c67c6a6604f90b0cc215a39806, type: 2}
     - target: {fileID: 4650308679702142297, guid: f3bde662581fba74ebf10a6679e11f4e,
         type: 3}
       propertyPath: m_IsActive
@@ -394,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5074041701611779572, guid: f3bde662581fba74ebf10a6679e11f4e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62fdd3c67c6a6604f90b0cc215a39806, type: 2}
     - target: {fileID: 5636278989233136842, guid: f3bde662581fba74ebf10a6679e11f4e,
         type: 3}
       propertyPath: m_IsActive

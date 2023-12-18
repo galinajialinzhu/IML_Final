@@ -5,42 +5,60 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Galina/instruction/ui guide.unity
     guid: 58c4a41db053f4349aa2373eec7e07b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/0 Home.unity
     guid: c208546d53214144fa049dc5b69853e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Wood.unity
     guid: 0e50a043fb6eb8a40903ff35e3be979d
-  - enabled: 1
+  - enabled: 0
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Fire.unity
     guid: 59a789da774372e4a90af7cc419787f2
-  - enabled: 1
+  - enabled: 0
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Water.unity
     guid: 3b0d0ed2f6a0c244fac65e18588f4c99
-  - enabled: 1
+  - enabled: 0
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Earth.unity
     guid: c6e651f9567402b42ac53bfc7e7bd656
-  - enabled: 1
+  - enabled: 0
     path: Assets/_K0TANG/Scenes/Map_Update/Map_Metal.unity
     guid: 798ebc1ac8d38974f93cf6e73a4c7cd3
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/1 Wood.unity
     guid: 8d0dfd9834a56ba4a9e30a62f180e9ff
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/2 Earth.unity
     guid: 91388d47b07d644468283b0536078e6e
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/3 Water.unity
     guid: 4d0626ff7318d6641b156e78ed97cd70
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/4 Fire.unity
     guid: 7a9b71f24a5ebb0489188e7d8cc4234d
-  - enabled: 1
+  - enabled: 0
     path: Assets/# Scenes/Archive/5 Metal.unity
     guid: 8303b18e7f4c24e4a852a4b4bf6a4abf
+  - enabled: 1
+    path: Assets/# Scenes/0 Home.unity
+    guid: 5d4b98a256516b64e87f07fe890ea1a9
+  - enabled: 1
+    path: Assets/# Scenes/1 Wood.unity
+    guid: be0f08abd0b7c1b4d92fb31f3adbffb1
+  - enabled: 1
+    path: Assets/# Scenes/2 Earth.unity
+    guid: b83fcb3003ad250429048afcb564ab3d
+  - enabled: 1
+    path: Assets/# Scenes/3 Water.unity
+    guid: 52dd8e98081abe04c870fdb9a62b1430
+  - enabled: 1
+    path: Assets/# Scenes/4 Fire.unity
+    guid: d2eca38401877a34185f98efb91215da
+  - enabled: 1
+    path: Assets/# Scenes/5 Metal.unity
+    guid: 0f7ae2fc544086849880ffd7ca4189d2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a0149944be61ad3448d440077794607c,
       type: 2}
